@@ -1,0 +1,2829 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="static/images/frontt_logo.png">
+        <title>Frontt - Professional online presence for solopreneurs and small businesses</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+            body { 
+                font-family: 'Inter', sans-serif; 
+                -webkit-font-smoothing: antialiased;
+            }
+            
+            .btn-primary {
+                background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+                transition: all 0.2s ease;
+            }
+            
+            .btn-primary:hover {
+                background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+            }
+            
+            .product-demo {
+                transition: transform 0.3s ease;
+            }
+            
+            .product-demo:hover {
+                transform: translateY(-4px);
+            }
+            
+            .feature-card {
+                transition: all 0.3s ease;
+                border: 1px solid #f1f5f9;
+            }
+            
+            .feature-card:hover {
+                border-color: #e2e8f0;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+            
+            @keyframes scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+
+            @keyframes scroll-reverse {
+                0% { transform: translateX(-50%); }
+                100% { transform: translateX(0); }
+            }
+
+            .animate-scroll-reverse {
+                animation: scroll-reverse 35s linear infinite;
+            }
+            
+            .animate-scroll {
+                animation: scroll 30s linear infinite;
+            }
+            
+            /* Orbit Animation */
+            .orbit-container {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            
+            .orbit-center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+            }
+            
+            .orbit-item {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                color: white;
+                animation: orbit 8s linear infinite, suckIn 8s ease-in-out infinite;
+            }
+            
+            @keyframes orbit {
+                from {
+                    transform: rotate(0deg) translateX(120px) rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+                }
+            }
+            
+            @keyframes suckIn {
+                0%, 70% {
+                    opacity: 1;
+                    transform: rotate(0deg) translateX(120px) rotate(0deg) scale(1);
+                }
+                85% {
+                    opacity: 0.7;
+                    transform: rotate(252deg) translateX(80px) rotate(-252deg) scale(0.7);
+                }
+                95% {
+                    opacity: 0.3;
+                    transform: rotate(288deg) translateX(40px) rotate(-288deg) scale(0.4);
+                }
+                100% {
+                    opacity: 0;
+                    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0);
+                }
+            }
+            
+            .orbit-item:nth-child(2) { animation-delay: -1s; }
+            .orbit-item:nth-child(3) { animation-delay: -2s; }
+            .orbit-item:nth-child(4) { animation-delay: -3s; }
+            .orbit-item:nth-child(5) { animation-delay: -4s; }
+            .orbit-item:nth-child(6) { animation-delay: -5s; }
+            .orbit-item:nth-child(7) { animation-delay: -6s; }
+            .orbit-item:nth-child(8) { animation-delay: -7s; }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900">
+        <!-- Navigation -->
+   <!-- Navigation -->
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <!-- Changed from max-w-5xl to max-w-7xl and reduced padding -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-md flex items-center justify-center">
+                    <span class="text-white font-semibold text-sm">F</span>
+                </div>
+                <span class="text-xl font-semibold">Frontt</span>
+            </div>
+         <button class="btn-primary text-white px-4 py-2 rounded-md text-sm font-medium" onclick="window.open('https://tally.so/r/3XP9Jj', '_blank')">
+            Get early access
+        </button>
+        </div>
+    </div>
+</nav>
+
+        <!-- Hero Section -->
+      <!-- Hero Section -->
+
+<!-- Hero Section -->
+<section class="py-8 sm:py-12 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 2px 2px, #000 1px, transparent 0); background-size: 40px 40px;"></div>
+    <!-- Subtle geometric shapes -->
+    <div class="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full opacity-50 blur-3xl"></div>
+    <div class="absolute bottom-32 left-16 w-48 h-48 bg-gradient-to-br from-purple-200 to-purple-300 rounded-full opacity-50 blur-2xl"></div>
+    <div class="absolute top-40 left-1/3 w-40 h-40 bg-gradient-to-br from-green-200 to-green-300 rounded-full opacity-45 blur-2xl"></div>
+    <div class="absolute top-60 right-1/4 w-36 h-36 bg-gradient-to-br from-yellow-200 to-orange-300 rounded-full opacity-40 blur-xl"></div>
+    <div class="absolute bottom-20 right-1/3 w-52 h-52 bg-gradient-to-br from-pink-200 to-rose-300 rounded-full opacity-45 blur-3xl"></div>
+    <div class="absolute top-32 left-20 w-28 h-28 bg-gradient-to-br from-cyan-200 to-teal-300 rounded-full opacity-40 blur-xl"></div>
+    <div class="absolute bottom-60 left-1/2 w-44 h-44 bg-gradient-to-br from-indigo-200 to-violet-300 rounded-full opacity-35 blur-2xl"></div>
+    
+    <!-- Changed from max-w-5xl to max-w-7xl and reduced px-6 to px-4 on mobile, px-6 on larger screens -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Hero Demo Section -->
+        <!-- Changed from max-w-7xl to max-w-none and reduced gap -->
+        <div class="mt-2 max-w-none mx-auto">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <!-- Left Side - Clean Hero Content -->
+                <div>
+                    <!-- <p class="text-sm text-gray-600 mb-4">Coming soon</p> -->
+                    <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                        Your online presence should look and convey professionally what you do
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                        With Frontt, you get a professional, AI-enabled website and link-in-bio that communicates your value, represents you authentically, and turns visitors into clients                    <div class="mb-8">
+                       <div class="max-w-sm">
+    <button 
+        class="btn-primary text-white px-8 py-3 rounded-md font-medium text-sm w-full"
+        onclick="window.open('https://tally.so/r/3XP9Jj', '_blank')"
+    >
+        Get early access
+    </button>
+</div>
+                        <p class="text-xs text-gray-500 mt-3">No spam. Unsubscribe anytime.</p>
+                    </div>
+
+                    <!-- Floating Benefits Trigger -->
+                    <!-- <button 
+                        onclick="toggleBenefits()"
+                        class="inline-flex items-center space-x-2 text-cyan-600 hover:text-cyan-700 font-medium text-sm transition-colors cursor-pointer group"
+                        id="benefitsToggle"
+                    >
+                        <span>Everything you need to turn visitors into customers</span>
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button> -->
+                </div>
+
+                <!-- Right Side - Screenshot Preview with Chatbot -->
+                <div class="relative">
+                    <!-- Screenshot Container - Increased max width -->
+                    <div class="w-full max-w-[900px] ml-auto rounded-xl border border-gray-200 shadow-2xl overflow-hidden bg-white">
+
+                        <!-- Browser Bar -->
+                        <div class="bg-gray-50 px-3 py-2 border-b border-gray-200 flex items-center space-x-2">
+                            <div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
+                            <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
+                            <div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+                            <div class="ml-3 text-xs text-gray-500">frontt.com/alex-chen</div>
+                        </div>
+
+                        <!-- Screenshot Body -->
+                        <img 
+                            src="static/images/alex_chen_frontt.png" 
+                            alt="Swim Corner Website Preview" 
+                            class="w-full h-auto"
+                        />
+                    </div>
+
+                 <!-- Modern AI Card Overlay -->
+<div class="absolute -right-4 -bottom-60 w-72 z-20">
+    <!-- AI Conversation Card -->
+    <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden transform hover:scale-105 transition-all duration-300">
+        <!-- Compact Header -->
+        <div class="p-4 pb-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="relative">
+                    <div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg">
+                        <span class="text-white font-bold text-xs">AC</span>
+                    </div>
+                    <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white animate-pulse"></div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-900 text-sm">Alex's AI Assistant</h3>
+                    <p class="text-xs text-gray-500">NYC Photography Expert</p>
+                </div>
+            </div>
+            <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center opacity-60">
+                <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Message Preview - Scrollable -->
+        <div class="px-3 pb-3 h-56 overflow-y-auto space-y-2 scrollbar-thin scrollbar-thumb-gray-300">
+            <!-- AI Introduction -->
+            <div class="flex items-start space-x-2">
+                <div class="w-5 h-5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span class="text-white font-bold text-xs">AC</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 px-2 py-1.5 rounded-xl rounded-bl-md max-w-xs shadow-sm">
+                    <p class="text-xs text-gray-800 leading-tight">
+                        Hi! 👋 I'm Alex's AI assistant, built to represent him and help you learn about his NYC photography work. What brings you here today?
+                    </p>
+                </div>
+            </div>
+
+            <!-- User Message 1 -->
+            <div class="flex justify-end">
+                <div class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-xl rounded-br-md max-w-xs shadow-lg">
+                    <p class="text-xs font-medium">What makes Alex different from other NYC photographers?</p>
+                </div>
+            </div>
+
+            <!-- AI Response 1 -->
+            <div class="flex items-start space-x-2">
+                <div class="w-5 h-5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span class="text-white font-bold text-xs">AC</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 px-2 py-1.5 rounded-xl rounded-bl-md max-w-xs shadow-sm">
+                    <p class="text-xs text-gray-800 leading-tight mb-1">
+                        Great question! Here's what sets Alex apart after 8+ years in NYC:
+                    </p>
+                    <div class="space-y-0.5 text-xs text-gray-800">
+                        <div class="flex items-start space-x-1">
+                            <span class="text-cyan-600 text-xs">🎯</span>
+                            <span><strong>Authentic storytelling:</strong> captures genuine personality, not poses</span>
+                        </div>
+                        <div class="flex items-start space-x-1">
+                            <span class="text-cyan-600 text-xs">🏙️</span>
+                            <span><strong>NYC expertise:</strong> knows perfect rooftops, hidden gems, iconic spots</span>
+                        </div>
+                        <div class="flex items-start space-x-1">
+                            <span class="text-cyan-600 text-xs">💼</span>
+                            <span><strong>Business results:</strong> headshots that land interviews & opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Message 2 -->
+            <div class="flex justify-end">
+                <div class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-xl rounded-br-md max-w-xs shadow-lg">
+                    <p class="text-xs font-medium">That sounds perfect! What do you charge for corporate headshots?</p>
+                </div>
+            </div>
+
+            <!-- AI Response 2 -->
+            <div class="flex items-start space-x-2">
+                <div class="w-5 h-5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span class="text-white font-bold text-xs">AC</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 px-2 py-1.5 rounded-xl rounded-bl-md max-w-xs shadow-sm">
+                    <p class="text-xs text-gray-800 leading-tight mb-1">
+                        Corporate headshots start at <span class="font-semibold text-gray-900">$199</span> and include multiple outfit changes, different backgrounds, and high-res files perfect for LinkedIn and company websites.
+                    </p>
+                    <p class="text-xs text-gray-800 leading-tight">
+                        I'd recommend a quick 15-minute call with Alex to discuss your specific needs and ideal locations. He can show you examples and plan the perfect session for your consulting business.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA Message -->
+            <div class="flex items-start space-x-2">
+                <div class="w-5 h-5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span class="text-white font-bold text-xs">AC</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 px-2 py-1.5 rounded-xl rounded-bl-md max-w-xs shadow-sm">
+                    <p class="text-xs text-gray-800 leading-tight mb-2">
+                        Want to see if Alex is the right fit for your headshots?
+                    </p>
+                    
+                    <!-- Quick Action Buttons -->
+                    <div class="flex gap-1">
+                        <button class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1 rounded-lg text-xs font-medium shadow-sm hover:shadow-md transition-all">
+                            📅 Book Free Call
+                        </button>
+                        <button class="bg-white border border-gray-200 text-gray-700 px-2 py-1 rounded-lg text-xs font-medium hover:bg-gray-50 transition-all">
+                            📸 View Portfolio
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Animation -->
+            <div class="flex items-center space-x-2 opacity-75">
+                <div class="w-5 h-5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-white font-bold text-xs">AC</span>
+                </div>
+                <div class="bg-gray-100 px-2 py-1.5 rounded-xl rounded-bl-md">
+                    <div class="flex space-x-1">
+                        <div class="w-1 h-1 bg-cyan-400 rounded-full animate-bounce"></div>
+                        <div class="w-1 h-1 bg-cyan-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                        <div class="w-1 h-1 bg-cyan-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Minimalist Input -->
+        <div class="p-3 pt-2 border-t border-gray-100/50">
+            <div class="bg-gray-50 rounded-xl p-2 flex items-center space-x-2">
+                <input 
+                    type="text" 
+                    placeholder="Ask about pricing, locations, availability..."
+                    class="flex-1 bg-transparent text-xs text-gray-700 placeholder-gray-400 outline-none"
+                >
+                <button class="w-6 h-6 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg flex items-center justify-center shadow-sm hover:shadow-md transition-all">
+                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scrolling Personas Section -->
+        <!-- Scrolling Personas Section --><!-- Combined Personas Section -->
+<div class="mb-8 mt-16">
+    <p class="text-center text-sm text-gray-500 mb-8">Perfect for solopreneurs and small businesses</p>
+    
+    <!-- Solopreneurs Scroll -->
+    <div class="overflow-hidden mb-6">
+        <div class="flex animate-scroll space-x-8 whitespace-nowrap">
+            <!-- First set -->
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">💼</span>
+                <span class="text-xs font-medium text-gray-700">Business Coaches</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">🏠</span>
+                <span class="text-xs font-medium text-gray-700">Real Estate Agents</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">👨‍🍳</span>
+                <span class="text-xs font-medium text-gray-700">Private Chefs</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">🎨</span>
+                <span class="text-xs font-medium text-gray-700">Graphic Designers</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">💪</span>
+                <span class="text-xs font-medium text-gray-700">Personal Trainers</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">📸</span>
+                <span class="text-xs font-medium text-gray-700">Photographers</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">⚖️</span>
+                <span class="text-xs font-medium text-gray-700">Legal Consultants</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">🧘</span>
+                <span class="text-xs font-medium text-gray-700">Wellness Coaches</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">💰</span>
+                <span class="text-xs font-medium text-gray-700">Financial Advisors</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">💻</span>
+                <span class="text-xs font-medium text-gray-700">Freelance Developers</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">📚</span>
+                <span class="text-xs font-medium text-gray-700">Private Tutors</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">🎬</span>
+                <span class="text-xs font-medium text-gray-700">Content Creators</span>
+            </div>
+            
+            <!-- Duplicate set for seamless loop -->
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">💼</span>
+                <span class="text-xs font-medium text-gray-700">Business Coaches</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">🏠</span>
+                <span class="text-xs font-medium text-gray-700">Real Estate Agents</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">👨‍🍳</span>
+                <span class="text-xs font-medium text-gray-700">Private Chefs</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">🎨</span>
+                <span class="text-xs font-medium text-gray-700">Graphic Designers</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">💪</span>
+                <span class="text-xs font-medium text-gray-700">Personal Trainers</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">📸</span>
+                <span class="text-xs font-medium text-gray-700">Photographers</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">⚖️</span>
+                <span class="text-xs font-medium text-gray-700">Legal Consultants</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">🧘</span>
+                <span class="text-xs font-medium text-gray-700">Wellness Coaches</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">💰</span>
+                <span class="text-xs font-medium text-gray-700">Financial Advisors</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">💻</span>
+                <span class="text-xs font-medium text-gray-700">Freelance Developers</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">📚</span>
+                <span class="text-xs font-medium text-gray-700">Private Tutors</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-sm">
+                <span class="text-sm">🎬</span>
+                <span class="text-xs font-medium text-gray-700">Content Creators</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Small Businesses Scroll -->
+    <div class="overflow-hidden">
+        <div class="flex animate-scroll-reverse space-x-8 whitespace-nowrap">
+            <!-- First set -->
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🏪</span>
+                <span class="text-xs font-medium text-gray-700">Local Shops</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">☕</span>
+                <span class="text-xs font-medium text-gray-700">Coffee Shops</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🍕</span>
+                <span class="text-xs font-medium text-gray-700">Restaurants</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🧴</span>
+                <span class="text-xs font-medium text-gray-700">Beauty Salons</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🛠️</span>
+                <span class="text-xs font-medium text-gray-700">Home Services</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🏋️</span>
+                <span class="text-xs font-medium text-gray-700">Fitness Studios</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🏥</span>
+                <span class="text-xs font-medium text-gray-700">Medical Practices</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🎭</span>
+                <span class="text-xs font-medium text-gray-700">Event Venues</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🚗</span>
+                <span class="text-xs font-medium text-gray-700">Auto Services</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🧼</span>
+                <span class="text-xs font-medium text-gray-700">Cleaning Services</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🔧</span>
+                <span class="text-xs font-medium text-gray-700">Repair Shops</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🏨</span>
+                <span class="text-xs font-medium text-gray-700">B&Bs</span>
+            </div>
+            
+            <!-- Duplicate set for seamless loop -->
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🏪</span>
+                <span class="text-xs font-medium text-gray-700">Local Shops</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">☕</span>
+                <span class="text-xs font-medium text-gray-700">Coffee Shops</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🍕</span>
+                <span class="text-xs font-medium text-gray-700">Restaurants</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🧴</span>
+                <span class="text-xs font-medium text-gray-700">Beauty Salons</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🛠️</span>
+                <span class="text-xs font-medium text-gray-700">Home Services</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🏋️</span>
+                <span class="text-xs font-medium text-gray-700">Fitness Studios</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🏥</span>
+                <span class="text-xs font-medium text-gray-700">Medical Practices</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🎭</span>
+                <span class="text-xs font-medium text-gray-700">Event Venues</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🚗</span>
+                <span class="text-xs font-medium text-gray-700">Auto Services</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🧼</span>
+                <span class="text-xs font-medium text-gray-700">Cleaning Services</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🔧</span>
+                <span class="text-xs font-medium text-gray-700">Repair Shops</span>
+            </div>
+            <div class="flex items-center space-x-2 bg-blue-50/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">
+                <span class="text-sm">🏨</span>
+                <span class="text-xs font-medium text-gray-700">B&Bs</span>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+
+        <!-- Problem Section -->
+        <!-- Problem Section -->
+<section class="py-16 sm:py-24 bg-slate-800 relative overflow-hidden">
+    <!-- Warmer dark section with teal accents -->
+    <div class="absolute top-10 right-10 w-40 h-40 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-full opacity-25 blur-2xl"></div>
+    <div class="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-full opacity-25 blur-xl"></div>
+    
+    <!-- Changed to match hero section width and padding -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                The problem
+            </h2>
+            <p class="text-lg text-slate-300 max-w-3xl mx-auto">
+                Your business is working hard - but your online presence isn't
+            </p>
+        </div>
+
+
+        <div class="grid lg:grid-cols-2 gap-20 items-start">
+            <!-- Left Side - Two Main Problems -->
+            <div class="space-y-16">
+                <!-- Problem 1: Website Maintenance -->
+                <div class="group">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-red-500/20 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-red-400/30 group-hover:bg-red-500/30 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                            <span class="text-3xl">🔧</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-4 leading-tight">
+                                Maintaining your personal website is costly and complicated
+                            </h3>
+                            <p class="text-slate-300 leading-relaxed">
+                                Building and maintaining professional websites means worrying about design, content structure, updates, and technical issues. But what you actually need is just a clean, professional site that effectively communicates your value and services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 2: Silent Visitors -->
+                <div class="group">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-yellow-500/20 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-yellow-400/30 group-hover:bg-yellow-500/30 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                            <span class="text-3xl">🔇</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-4 leading-tight">
+                                Silent visitors do not convert
+                            </h3>
+                            <p class="text-slate-300 leading-relaxed">
+                                Potential clients visit your online presence, spend time looking around because they're interested, but leave without taking any action. They have questions about pricing, process, or fit, but there's no way to get immediate answers or have a real conversation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Platform Problems -->
+            <div>
+                <div class="group mb-12">
+                    <div class="flex items-start space-x-6 mb-8">
+                        <div class="w-16 h-16 bg-orange-500/20 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-orange-400/30 group-hover:bg-orange-500/30 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                            <span class="text-3xl">📱</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-4 leading-tight">
+                                Current platforms don't effectively communicate your value
+                            </h3>
+                            <p class="text-slate-300 leading-relaxed">
+                                None of these platforms let you tell your complete business story or showcase your expertise the way you actually work with clients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform Examples Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-slate-700/30 backdrop-blur-sm rounded-2xl p-5 border border-slate-600/20 hover:bg-slate-700/50 hover:border-slate-500/30 transition-all duration-300 group">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-blue-600/30 rounded-xl flex items-center justify-center group-hover:bg-blue-600/50 transition-colors">
+                                <span class="text-blue-300 font-bold text-sm">in</span>
+                            </div>
+                            <h4 class="text-white font-semibold">LinkedIn</h4>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Too corporate and limited. Can't showcase your personality or detailed service offerings.</p>
+                    </div>
+
+                    <div class="bg-slate-700/30 backdrop-blur-sm rounded-2xl p-5 border border-slate-600/20 hover:bg-slate-700/50 hover:border-slate-500/30 transition-all duration-300 group">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-green-600/30 rounded-xl flex items-center justify-center group-hover:bg-green-600/50 transition-colors">
+                                <span class="text-green-300 font-bold text-sm">🔗</span>
+                            </div>
+                            <h4 class="text-white font-semibold">Linktree</h4>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Just a list of links. Looks unprofessional and provides no way to engage or convert visitors.</p>
+                    </div>
+
+                    <div class="bg-slate-700/30 backdrop-blur-sm rounded-2xl p-5 border border-slate-600/20 hover:bg-slate-700/50 hover:border-slate-500/30 transition-all duration-300 group">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-purple-600/30 rounded-xl flex items-center justify-center group-hover:bg-purple-600/50 transition-colors">
+                                <span class="text-purple-300 font-bold text-sm">S</span>
+                            </div>
+                            <h4 class="text-white font-semibold">Stan</h4>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Basic landing pages with no conversation capability. Visitors still leave with unanswered questions.</p>
+                    </div>
+
+                    <div class="bg-slate-700/30 backdrop-blur-sm rounded-2xl p-5 border border-slate-600/20 hover:bg-slate-700/50 hover:border-slate-500/30 transition-all duration-300 group">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-pink-500/30 rounded-xl flex items-center justify-center group-hover:bg-pink-500/50 transition-colors">
+                                <span class="text-pink-300 text-sm">📷</span>
+                            </div>
+                            <h4 class="text-white font-semibold">Instagram</h4>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Visual-first, not business-focused. Hard to explain complex services or pricing.</p>
+                    </div>
+
+                    <div class="bg-slate-700/30 backdrop-blur-sm rounded-2xl p-5 border border-slate-600/20 hover:bg-slate-700/50 hover:border-slate-500/30 transition-all duration-300 group">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-green-500/30 rounded-xl flex items-center justify-center group-hover:bg-green-500/50 transition-colors">
+                                <span class="text-green-300 text-xs font-bold">UP</span>
+                            </div>
+                            <h4 class="text-white font-semibold">Upwork/Fiverr</h4>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Commoditize your services. Race to the bottom on pricing with little differentiation.</p>
+                    </div>
+
+                    <div class="bg-slate-700/30 backdrop-blur-sm rounded-2xl p-5 border border-slate-600/20 hover:bg-slate-700/50 hover:border-slate-500/30 transition-all duration-300 group">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-gray-600/30 rounded-xl flex items-center justify-center border border-gray-500/30 group-hover:bg-gray-600/50 transition-colors">
+                                <span class="text-gray-200 text-sm font-bold">𝕏</span>
+                            </div>
+                            <h4 class="text-white font-semibold">Twitter/X</h4>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">Character limits and algorithm changes. Not designed for showcasing professional services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-8 sm:py-12 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 2px 2px, #000 1px, transparent 0); background-size: 40px 40px;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+              <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/10 to-teal-500/10 backdrop-blur-sm px-4 py-2 rounded-full border border-cyan-300/30 mb-6">
+                <span class="text-cyan-600 text-sm">💡</span>
+                <span class="text-cyan-600 text-sm font-medium">What is Frontt?</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Everything you need to present yourself professionally online
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                From professional website to smart conversations to business insights - all working together seamlessly. <span class="font-semibold text-gray-900">You own your content and branding</span> - we provide the infrastructure.
+            </p>
+        </div>
+        
+        <!-- Dual Product Examples -->
+        <div class="mt-16 max-w-none mx-auto">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Professional Website Demo -->
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Professional Website</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Clean, photography-focused design that showcases your work and expertise professionally</p>
+                    
+                    <div class="w-full bg-white rounded-xl border border-gray-200 shadow-2xl overflow-hidden">
+                        <!-- Browser Bar -->
+                        <div class="bg-gray-50 px-3 py-2 border-b border-gray-200 flex items-center space-x-2">
+                            <div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
+                            <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
+                            <div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+                            <div class="ml-3 text-xs text-gray-500">frontt.com/alex-chen</div>
+                        </div>
+                        
+                        <!-- Alex Chen Screenshot -->
+                        <div class="h-80 overflow-hidden">
+                            <img 
+                                src="static/images/alex_chen_frontt.png" 
+                                alt="Alex Chen Photography Website Preview" 
+                                class="w-full h-full object-cover object-left"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Conversations Demo -->
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Smart Conversations</h3>
+                    <p class="text-gray-600 mb-4 text-sm">AI represents Alex to answer questions about his work, explain his value, and guide visitors to book sessions</p>
+                    
+                    <div class="w-full bg-white rounded-xl border border-gray-200 shadow-2xl overflow-hidden relative">
+                        <!-- Browser Bar -->
+                        <div class="bg-gray-50 px-3 py-2 border-b border-gray-200 flex items-center space-x-2">
+                            <div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
+                            <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
+                            <div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+                            <div class="ml-3 text-xs text-gray-500">frontt.com/alex-chen</div>
+                        </div>
+                        
+                        <!-- AI Chat Interface -->
+                        <div class="h-80 bg-gray-50 p-3 relative">
+                            <!-- Website Background Preview -->
+                            <div class="absolute inset-0 p-3">
+                                <div class="w-full h-full bg-white rounded-lg border opacity-30">
+                                    <div class="p-4">
+                                        <div class="flex items-center space-x-2 mb-3">
+                                            <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                                            <div class="h-3 bg-gray-300 rounded w-24"></div>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <div class="h-2 bg-gray-200 rounded w-full"></div>
+                                            <div class="h-2 bg-gray-200 rounded w-3/4"></div>
+                                            <div class="h-2 bg-gray-200 rounded w-1/2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- AI Chat Overlay -->
+                            <div class="absolute bottom-3 right-3 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 overflow-hidden z-10">
+                                <!-- Chat Header -->
+                                <div class="bg-gradient-to-r from-cyan-500 to-teal-600 p-3 flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                                            <span class="text-white font-bold text-xs">AC</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-medium text-xs">Alex's AI Assistant</h4>
+                                            <p class="text-white/80 text-xs">NYC Photography Expert</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Chat Messages -->
+                                <div class="p-3 h-48 overflow-y-auto space-y-2">
+                                    <!-- AI Introduction -->
+                                    <div class="flex items-start space-x-2">
+                                        <div class="w-5 h-5 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <span class="text-white font-bold text-xs">AC</span>
+                                        </div>
+                                        <div class="bg-gray-100 rounded-xl rounded-bl-md p-2 max-w-xs">
+                                            <p class="text-xs text-gray-800">Hi! 👋 I'm Alex's AI assistant. I can help you learn about his NYC photography work. What brings you here?</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- User Question 1 -->
+                                    <div class="flex justify-end">
+                                        <div class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white rounded-xl rounded-br-md p-2 max-w-xs">
+                                            <p class="text-xs">What makes Alex different from other NYC photographers?</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- AI Response 1 -->
+                                    <div class="flex items-start space-x-2">
+                                        <div class="w-5 h-5 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <span class="text-white font-bold text-xs">AC</span>
+                                        </div>
+                                        <div class="bg-gray-100 rounded-xl rounded-bl-md p-2 max-w-xs">
+                                            <p class="text-xs text-gray-800 mb-1">Alex captures authentic personalities, not poses. With 8+ years in NYC, he knows perfect spots and creates headshots that land opportunities.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- User Question 2 -->
+                                    <div class="flex justify-end">
+                                        <div class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white rounded-xl rounded-br-md p-2 max-w-xs">
+                                            <p class="text-xs">What do you charge for corporate headshots?</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- AI Response 2 -->
+                                    <div class="flex items-start space-x-2">
+                                        <div class="w-5 h-5 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <span class="text-white font-bold text-xs">AC</span>
+                                        </div>
+                                        <div class="bg-gray-100 rounded-xl rounded-bl-md p-2 max-w-xs">
+                                            <p class="text-xs text-gray-800 mb-1">Corporate headshots start at $199 and include multiple outfits, backgrounds, and high-res files. I'd recommend a quick call with Alex to discuss your needs.</p>
+                                            <div class="flex gap-1 mt-2">
+                                                <button class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-2 py-1 rounded-lg text-xs font-medium">
+                                                    📅 Book Call
+                                                </button>
+                                                <button class="bg-white border border-gray-200 text-gray-700 px-2 py-1 rounded-lg text-xs">
+                                                    📸 Portfolio
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Input -->
+                                <div class="p-3 border-t border-gray-100">
+                                    <div class="bg-gray-50 rounded-lg p-2 flex items-center">
+                                        <input type="text" placeholder="Ask about pricing, availability..." class="flex-1 bg-transparent text-xs outline-none">
+                                        <button class="w-6 h-6 bg-gradient-to-r from-cyan-500 to-teal-600 rounded text-white flex items-center justify-center">
+                                            <span class="text-xs">→</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visitor Insights Demo -->
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Visitor Insights</h3>
+                    <p class="text-gray-600 mb-4 text-sm">See how visitors interact with Alex's presence and what photography inquiries convert best</p>
+                    
+                    <div class="w-full bg-white rounded-xl border border-gray-200 shadow-2xl overflow-hidden relative">
+                        <!-- Browser Bar -->
+                        <div class="bg-gray-50 px-3 py-2 border-b border-gray-200 flex items-center space-x-2">
+                            <div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
+                            <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
+                            <div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+                            <div class="ml-3 text-xs text-gray-500">frontt.app/dashboard</div>
+                        </div>
+                        
+                        <!-- Dashboard Body -->
+                        <div class="h-80 bg-gray-50 p-4">
+                            <!-- Dashboard Header -->
+                            <div class="flex justify-between items-center mb-4">
+                                <h4 class="text-lg font-bold text-gray-900">Alex's Dashboard</h4>
+                                <div class="flex items-center space-x-1 bg-green-100 px-3 py-1 rounded-full">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                    <span class="text-green-700 text-xs font-medium">Live</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Photography-Specific Stats Grid -->
+                            <div class="grid grid-cols-3 gap-3 mb-4">
+                                <div class="bg-white rounded-lg p-3 shadow-sm">
+                                    <div class="text-2xl font-bold text-blue-600">23</div>
+                                    <div class="text-sm text-gray-600">Photo Inquiries</div>
+                                    <div class="text-xs text-green-600">+45% this week</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-sm">
+                                    <div class="text-2xl font-bold text-green-600">8</div>
+                                    <div class="text-sm text-gray-600">Session Bookings</div>
+                                    <div class="text-xs text-green-600">+60% this week</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-sm">
+                                    <div class="text-2xl font-bold text-purple-600">156</div>
+                                    <div class="text-sm text-gray-600">Portfolio Views</div>
+                                    <div class="text-xs text-blue-600">+28% this week</div>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Visitor Behavior Insights -->
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-3 border border-blue-100">
+                                    <div class="text-lg font-bold text-blue-700">142</div>
+                                    <div class="text-xs text-gray-700">users clicked into Event Photography this month</div>
+                                </div>
+                                <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-3 border border-green-100">
+                                    <div class="text-lg font-bold text-green-700">89</div>
+                                    <div class="text-xs text-gray-700">users asked about corporate headshot pricing</div>
+                                </div>
+                                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-3 border border-purple-100">
+                                    <div class="text-lg font-bold text-purple-700">67</div>
+                                    <div class="text-xs text-gray-700">visitors spent 3+ minutes on portfolio</div>
+                                </div>
+                                <div class="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg p-3 border border-orange-100">
+                                    <div class="text-lg font-bold text-orange-700">34</div>
+                                    <div class="text-xs text-gray-700">asked about NYC rooftop locations</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Photography-Focused Activity Feed -->
+                            <div class="bg-white rounded-lg p-3 shadow-sm">
+                                <h5 class="font-semibold text-gray-900 mb-3 text-xs">Recent Photography Activity</h5>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                            <span class="text-green-600 text-xs">📸</span>
+                                        </div>
+                                        <div class="flex-1 text-left">
+                                            <div class="text-xs font-medium text-gray-900">New booking: Corporate headshots</div>
+                                            <div class="text-xs text-gray-600">Sarah M. • LinkedIn photos • Friday 2pm • just now</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                                            <span class="text-blue-600 text-xs">💬</span>
+                                        </div>
+                                        <div class="flex-1 text-left">
+                                            <div class="text-xs font-medium text-gray-900">Active conversation</div>
+                                            <div class="text-xs text-gray-600">Event photography pricing • 3 min ago</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
+                                            <span class="text-orange-600 text-xs">🔥</span>
+                                        </div>
+                                        <div class="flex-1 text-left">
+                                            <div class="text-xs font-medium text-gray-900">Trending question</div>
+                                            <div class="text-xs text-gray-600">12 people asked about couple sessions this week</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bridge Section: What Frontt Is -->
+<section class="py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <!-- Subtle background elements -->
+    <div class="absolute top-10 right-20 w-32 h-32 bg-gradient-to-br from-cyan-200 to-teal-300 rounded-full opacity-20 blur-2xl"></div>
+    <div class="absolute bottom-10 left-20 w-24 h-24 bg-gradient-to-br from-teal-200 to-cyan-300 rounded-full opacity-15 blur-xl"></div>
+    
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+   
+        
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            Present your best professional online
+            <span class="bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+                Frontt
+            </span>
+        </h2>
+        <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12">
+            Use it as your personal website or link-in-bio. Replace your scattered links and static profiles with one professional presence that actually works to grow your business.
+        </p>
+        
+        <!-- Clean Use Cases Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
+            <div class="group">
+                <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                        <span class="text-white text-lg">📧</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 text-sm mb-1">Email signature</h3>
+                    <p class="text-xs text-gray-600">Professional link in every email</p>
+                </div>
+            </div>
+            
+            <div class="group">
+                <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                        <span class="text-white text-lg">📱</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 text-sm mb-1">Instagram bio</h3>
+                    <p class="text-xs text-gray-600">Better than basic link trees</p>
+                </div>
+            </div>
+            
+            <div class="group">
+                <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                        <span class="text-white text-lg">💼</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 text-sm mb-1">Business cards</h3>
+                    <p class="text-xs text-gray-600">QR code to your full presence</p>
+                </div>
+            </div>
+            
+            <div class="group">
+                <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                        <span class="text-white text-lg">🔗</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 text-sm mb-1">LinkedIn profile</h3>
+                    <p class="text-xs text-gray-600">Expand beyond platform limits</p>
+                </div>
+            </div>
+            
+            <div class="group md:col-span-3 lg:col-span-1">
+                <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                        <span class="text-white text-lg">📞</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 text-sm mb-1">Client referrals</h3>
+                    <p class="text-xs text-gray-600">Share one perfect link</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Simple bottom accent -->
+        <div class="mt-12 flex justify-center">
+            <div class="w-12 h-0.5 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full"></div>
+        </div>
+    </div>
+</section>
+        <!-- Orbit Animation Section -->
+      <!-- Orbit Animation Section - Repositioned as Main Digital Presence -->
+<!-- Spacious Value Communication Section -->
+<!-- Spacious Value Communication Section -->
+<section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <!-- Cleaner Visual: Organized Question Layout -->
+            <div class="flex justify-center">
+                <div class="relative w-full max-w-2xl h-[450px]">
+                    <!-- Center Business Person -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                        <div class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
+                            <span class="text-white text-2xl">👤</span>
+                        </div>
+                        <div class="text-center mt-3">
+                            <div class="text-sm font-semibold text-gray-900">You</div>
+                            <div class="text-xs text-gray-500">Your Business</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Center Business Person -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                        <div class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
+                            <span class="text-white text-2xl">👤</span>
+                        </div>
+                        <div class="text-center mt-3">
+                            <div class="text-sm font-semibold text-gray-900">You</div>
+                            <div class="text-xs text-gray-500">Your Business</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Top -->
+                    <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-56">
+                        <div class="bg-white rounded-xl px-3 py-2 shadow-lg border border-gray-200 text-center animate-bounce" style="animation-delay: 0.2s;">
+                            <div class="text-sm font-medium text-gray-900 mb-1">❓ "What exactly do you do?"</div>
+                            <div class="text-xs text-gray-500">Visitor wondering about services</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Right -->
+                    <div class="absolute top-12 right-12 w-52">
+                        <div class="bg-white rounded-xl px-3 py-2 shadow-lg border border-gray-200 animate-bounce" style="animation-delay: 0.4s;">
+                            <div class="text-sm font-medium text-gray-900 mb-1">💰 "How much does it cost?"</div>
+                            <div class="text-xs text-gray-500">Price-conscious prospect</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right -->
+                    <div class="absolute top-1/2 right-4 transform -translate-y-1/2 w-52">
+                        <div class="bg-white rounded-xl px-3 py-2 shadow-lg border border-gray-200 animate-bounce" style="animation-delay: 0.6s;">
+                            <div class="text-sm font-medium text-gray-900 mb-1">📈 "What results can I expect?"</div>
+                            <div class="text-xs text-gray-500">Results-focused buyer</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Right -->
+                    <div class="absolute bottom-12 right-12 w-52">
+                        <div class="bg-white rounded-xl px-3 py-2 shadow-lg border border-gray-200 animate-bounce" style="animation-delay: 0.8s;">
+                            <div class="text-sm font-medium text-gray-900 mb-1">⏰ "What's the process like?"</div>
+                            <div class="text-xs text-gray-500">Wants to understand approach</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-56">
+                        <div class="bg-white rounded-xl px-3 py-2 shadow-lg border border-gray-200 text-center animate-bounce" style="animation-delay: 1.0s;">
+                            <div class="text-sm font-medium text-gray-900 mb-1">🤔 "Why choose you over others?"</div>
+                            <div class="text-xs text-gray-500">Comparing different options</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Left -->
+                    <div class="absolute bottom-12 left-12 w-52">
+                        <div class="bg-white rounded-xl px-3 py-2 shadow-lg border border-gray-200 animate-bounce" style="animation-delay: 1.2s;">
+                            <div class="text-sm font-medium text-gray-900 mb-1">✅ "Are you right for me?"</div>
+                            <div class="text-xs text-gray-500">Checking for good fit</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Left -->
+                    <div class="absolute top-1/2 left-4 transform -translate-y-1/2 w-52">
+                        <div class="bg-white rounded-xl px-3 py-2 shadow-lg border border-gray-200 animate-bounce" style="animation-delay: 1.4s;">
+                            <div class="text-sm font-medium text-gray-900 mb-1">📅 "How long does it take?"</div>
+                            <div class="text-xs text-gray-500">Timeline-conscious client</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Left -->
+                    <div class="absolute top-12 left-12 w-52">
+                        <div class="bg-white rounded-xl px-3 py-2 shadow-lg border border-gray-200 animate-bounce" style="animation-delay: 1.6s;">
+                            <div class="text-sm font-medium text-gray-900 mb-1">🎯 "What's your approach?"</div>
+                            <div class="text-xs text-gray-500">Understanding methodology</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Subtle connecting lines -->
+                    <svg class="absolute inset-0 w-full h-full opacity-15 pointer-events-none" viewBox="0 0 450 450">
+                        <!-- Radiating lines from center -->
+                        <g stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3">
+                            <line x1="225" y1="225" x2="225" y2="80">
+                                <animate attributeName="stroke-dashoffset" values="0;-6" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="225" y1="225" x2="350" y2="120">
+                                <animate attributeName="stroke-dashoffset" values="0;-6" dur="2.2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="225" y1="225" x2="370" y2="225">
+                                <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.8s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="225" y1="225" x2="350" y2="330">
+                                <animate attributeName="stroke-dashoffset" values="0;-6" dur="2.4s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="225" y1="225" x2="225" y2="370">
+                                <animate attributeName="stroke-dashoffset" values="0;-6" dur="2.1s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="225" y1="225" x2="100" y2="330">
+                                <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.9s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="225" y1="225" x2="80" y2="225">
+                                <animate attributeName="stroke-dashoffset" values="0;-6" dur="2.3s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="225" y1="225" x2="100" y2="120">
+                                <animate attributeName="stroke-dashoffset" values="0;-6" dur="2.5s" repeatCount="indefinite"/>
+                            </line>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Text Content -->
+            <div class="text-center lg:text-left">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                    Turn curious visitors into 
+                    <span class="bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+                        qualified prospects
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                    Most visitors leave your current presence confused about what you do and why they should care. Your Frontt automatically explains your value, answers their questions, and guides them toward working with you.
+                </p>
+                
+                <div class="space-y-5 mb-8">
+                    <div class="flex items-start justify-center lg:justify-start space-x-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <span class="text-white text-sm">💎</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Communicates your unique value instantly</h3>
+                            <p class="text-sm text-gray-600">No more "What exactly do you do?" - visitors immediately understand your expertise and approach</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start justify-center lg:justify-start space-x-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-teal-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <span class="text-white text-sm">❓</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Answers every question they're thinking</h3>
+                            <p class="text-sm text-gray-600">Pricing, process, timeline, results - handled automatically before they even ask</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start justify-center lg:justify-start space-x-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-emerald-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <span class="text-white text-sm">🎯</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Guides them from interest to action</h3>
+                            <p class="text-sm text-gray-600">Qualified prospects book calls, unqualified ones learn what they need first</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-gray-50 to-cyan-50 rounded-xl p-6 border border-gray-200">
+                    <div class="flex items-start space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-white text-sm font-bold">SK</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900 text-sm">Sarah K.</div>
+                            <div class="text-gray-500 text-xs">Business Coach</div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 italic mb-3">
+                        "Before Frontt, people would check out my LinkedIn or Instagram but never really understood what I could do for them. Most just... left."
+                    </p>
+                    <p class="text-sm font-semibold text-gray-900">
+                        "Now visitors immediately get why I'm different and how I can help. My Frontt converts browsers into buyers better than I do in person."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Three Product Demos Section -->
+ 
+<!-- Three Product Demos Section -->
+
+<!-- Customizable Website Section -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Website Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .module-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .module-card.selected {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+            border-color: #06b6d4;
+        }
+        
+        .module-card.disabled {
+            opacity: 0.4;
+            transform: scale(0.98);
+        }
+        
+        .toggle-switch {
+            transition: all 0.3s ease;
+        }
+        
+        .toggle-switch.active {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+        }
+        
+        .toggle-switch.active .toggle-circle {
+            transform: translateX(20px);
+        }
+        
+        .floating-badge {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-4px); }
+        }
+        
+        .preview-overlay {
+            background: linear-gradient(45deg, rgba(6, 182, 212, 0.1), rgba(20, 184, 166, 0.1));
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8">
+
+<!-- Modular Website Section -->
+<section class="py-16 sm:py-24 bg-white relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-cyan-200 to-teal-300 rounded-full opacity-20 blur-2xl"></div>
+    <div class="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-br from-purple-200 to-indigo-300 rounded-full opacity-15 blur-2xl"></div>
+    
+    <div class="max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-6 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/10 to-teal-500/10 backdrop-blur-sm px-4 py-2 rounded-full border border-cyan-300/30 mb-6">
+                <span class="text-cyan-600 text-sm">🎨</span>
+                <span class="text-cyan-600 text-sm font-medium">Fully Customizable</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Modular by design, 
+                <span class="bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+                    customisable to your needs
+                </span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our modular web design means that you can customise and choose only the sections that matter to your business. Customize each one to fit your style. Arrange them to guide visitors exactly where you want them to go.
+            </p>
+        </div>
+
+        <!-- Main Demo Grid -->
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+            
+            <!-- Left: Modular Builder -->
+            <div class="space-y-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <span class="text-2xl mr-3">🔧</span>
+                        Build your sections
+                    </h3>
+                    <div class="text-sm text-gray-500">
+                        <span id="selectedCount">6</span> of 10 selected
+                    </div>
+                </div>
+                
+                <!-- Business Type Selector -->
+                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200 mb-6">
+                    <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                        <span class="text-blue-600 mr-2">🎯</span>
+                        What's your business focus?
+                    </h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button class="preset-btn bg-white border border-blue-200 rounded-lg p-3 text-sm hover:bg-blue-50 transition-colors" data-preset="coaching">
+                            💼 Business Coaching
+                        </button>
+                        <button class="preset-btn bg-white border border-blue-200 rounded-lg p-3 text-sm hover:bg-blue-50 transition-colors" data-preset="consulting">
+                            📊 Consulting
+                        </button>
+                        <button class="preset-btn bg-white border border-blue-200 rounded-lg p-3 text-sm hover:bg-blue-50 transition-colors" data-preset="creative">
+                            🎨 Creative Services
+                        </button>
+                        <button class="preset-btn bg-white border border-blue-200 rounded-lg p-3 text-sm hover:bg-blue-50 transition-colors" data-preset="products">
+                            📦 Product Business
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Modular Sections -->
+                <div class="space-y-4" id="moduleBuilder">
+                    <!-- Hero Section - Always Required -->
+                    <div class="module-card bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border-2 border-blue-200 selected" data-module="hero">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">🏠</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Hero Banner</h4>
+                                    <p class="text-sm text-gray-600">Your main value proposition</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    Required
+                                </div>
+                                <div class="toggle-switch active w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Section -->
+                    <div class="module-card bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-4 border-2 border-emerald-200 selected" data-module="services">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-emerald-500 to-green-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">⚙️</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Services</h4>
+                                    <p class="text-sm text-gray-600">What you offer clients</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-cyan-100 text-cyan-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    Most Popular
+                                </div>
+                                <div class="toggle-switch active w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Section -->
+                    <div class="module-card bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border-2 border-gray-200" data-module="products">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">📦</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Products</h4>
+                                    <p class="text-sm text-gray-600">Digital courses, ebooks, tools</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-orange-100 text-orange-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    E-commerce
+                                </div>
+                                <div class="toggle-switch w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Articles Section -->
+                    <div class="module-card bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-4 border-2 border-yellow-200 selected" data-module="articles">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">📝</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Articles & Insights</h4>
+                                    <p class="text-sm text-gray-600">Share your expertise</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    SEO Boost
+                                </div>
+                                <div class="toggle-switch active w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials Section -->
+                    <div class="module-card bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-4 border-2 border-indigo-200 selected" data-module="testimonials">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">⭐</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Client Testimonials</h4>
+                                    <p class="text-sm text-gray-600">Social proof that converts</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    High Impact
+                                </div>
+                                <div class="toggle-switch active w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Booking Section -->
+                    <div class="module-card bg-gradient-to-r from-rose-50 to-red-50 rounded-xl p-4 border-2 border-gray-200" data-module="booking">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-rose-500 to-red-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">📅</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Calendar Booking</h4>
+                                    <p class="text-sm text-gray-600">Let clients book directly</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    Conversion
+                                </div>
+                                <div class="toggle-switch w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Highlights Section -->
+                    <div class="module-card bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-4 border-2 border-teal-200 selected" data-module="features">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">✨</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Feature Highlights</h4>
+                                    <p class="text-sm text-gray-600">Showcase key benefits & differentiators</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    Credibility
+                                </div>
+                                <div class="toggle-switch active w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="module-card bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-4 border-2 border-gray-200" data-module="faq">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">❓</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">FAQ Section</h4>
+                                    <p class="text-sm text-gray-600">Answer common questions upfront</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    Reduces Friction
+                                </div>
+                                <div class="toggle-switch w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Section -->
+                    <div class="module-card bg-gradient-to-r from-slate-50 to-gray-50 rounded-xl p-4 border-2 border-gray-200" data-module="contact">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-r from-slate-500 to-gray-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-sm">📧</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Contact Form</h4>
+                                    <p class="text-sm text-gray-600">Capture leads with custom forms</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-medium">
+                                    Lead Gen
+                                </div>
+                                <div class="toggle-switch w-12 h-6 bg-gray-300 rounded-full relative">
+                                    <div class="toggle-circle w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Module Creator -->
+                <div class="mt-6">
+                    <button class="w-full bg-gradient-to-r from-gray-50 to-blue-50 border-2 border-dashed border-blue-300 rounded-xl p-4 text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:border-blue-400 transition-all duration-300 group">
+                        <div class="flex items-center justify-center space-x-3 mb-2">
+                            <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="text-white text-lg">+</span>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-semibold text-gray-900">Create Custom Section</h4>
+                                <p class="text-sm text-gray-600">Build exactly what your business needs</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Examples of custom sections -->
+                        <div class="flex flex-wrap gap-2 justify-center mt-3">
+                            <span class="bg-white px-3 py-1 rounded-full text-xs text-gray-600 border border-gray-200">Pricing Table</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-xs text-gray-600 border border-gray-200">Process Steps</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-xs text-gray-600 border border-gray-200">Team Bios</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-xs text-gray-600 border border-gray-200">Portfolio Gallery</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-xs text-gray-600 border border-gray-200">Location Map</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-xs text-gray-600 border border-gray-200">+ More</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="mt-6 space-y-3">
+                    <div class="flex gap-2">
+                        <button class="quick-action bg-green-100 text-green-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-green-200 transition-colors" data-action="selectAll">
+                            ✓ Select All
+                        </button>
+                        <button class="quick-action bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors" data-action="selectNone">
+                            × Deselect All
+                        </button>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-lg p-3 border border-cyan-200">
+                        <div class="flex items-start space-x-2">
+                            <div class="w-5 h-5 bg-cyan-500 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="text-white text-xs">💡</span>
+                            </div>
+                            <p class="text-sm text-gray-700">
+                                <span class="font-medium">Smart recommendations:</span> We'll suggest the best sections for your business type and help optimize based on what converts well in your industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Professional Result -->
+            <div class="lg:sticky lg:top-8">
+                <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                    <span class="text-2xl mr-3">🌟</span>
+                    Your professional result
+                </h3>
+                
+                <!-- Main Screenshot Container -->
+                <div class="w-full bg-white rounded-xl border border-gray-200 shadow-2xl overflow-hidden relative">
+                    <!-- Browser Bar -->
+                    <div class="bg-gray-50 px-3 py-2 border-b border-gray-200 flex items-center space-x-2">
+                        <div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
+                        <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
+                        <div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+                        <div class="ml-3 text-xs text-gray-500"></div>
+                    </div>
+
+                    <!-- Main Screenshot -->
+                    <img 
+                        src="static/images/alex_chen_frontt.png" 
+                        alt="Swim Corner Website Preview" 
+                        class="w-full h-auto"
+                    />
+                    
+                    <!-- Interactive Overlay showing modularity -->
+                    <div class="absolute inset-0 preview-overlay opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-xl">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-white text-2xl">🔧</span>
+                                </div>
+                                <h4 class="font-bold text-gray-900 mb-2">Fully Customizable</h4>
+                                <p class="text-sm text-gray-600 max-w-xs">
+                                    Every section can be added, removed, or rearranged to match your business needs
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div class="mt-6 space-y-4">
+                    <div class="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-xl p-4 border border-cyan-200">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-sm">🎨</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Choose Your Sections</h4>
+                                <p class="text-sm text-gray-600">Only show what matters to your business and clients</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-200">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-sm">⚡</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Instant Updates</h4>
+                                <p class="text-sm text-gray-600">Add or remove sections anytime as your business evolves</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-4 border border-emerald-200">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gradient-to-r from-emerald-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-sm">🎯</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Industry Optimized</h4>
+                                <p class="text-sm text-gray-600">AI suggests best practices for your specific business type</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-sm">✨</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Beautiful Design Included</h4>
+                                <p class="text-sm text-gray-600">Professional layouts and styling handled automatically - no design skills needed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const moduleCards = document.querySelectorAll('.module-card');
+    const presetButtons = document.querySelectorAll('.preset-btn');
+    const quickActions = document.querySelectorAll('.quick-action');
+    const selectedCounter = document.getElementById('selectedCount');
+    
+    // Business type presets
+    const presets = {
+        coaching: ['hero', 'services', 'articles', 'testimonials', 'features'],
+        consulting: ['hero', 'services', 'articles', 'booking', 'faq'],
+        creative: ['hero', 'services', 'products', 'testimonials', 'features'],
+        products: ['hero', 'products', 'articles', 'testimonials', 'features']
+    };
+    
+    // Initialize with coaching preset
+    updateSelection(presets.coaching);
+    
+    // Handle module toggle
+    moduleCards.forEach(card => {
+        if (card.dataset.module === 'hero') return; // Hero is always required
+        
+        card.addEventListener('click', function() {
+            const toggle = this.querySelector('.toggle-switch');
+            const isActive = toggle.classList.contains('active');
+            
+            if (isActive) {
+                toggle.classList.remove('active');
+                this.classList.remove('selected');
+                this.classList.add('disabled');
+            } else {
+                toggle.classList.add('active');
+                this.classList.add('selected');
+                this.classList.remove('disabled');
+            }
+            
+            updateCounter();
+        });
+    });
+    
+    // Handle business type presets
+    presetButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active state from all buttons
+            presetButtons.forEach(btn => {
+                btn.classList.remove('bg-blue-500', 'text-white');
+                btn.classList.add('bg-white', 'border-blue-200');
+            });
+            
+            // Add active state to clicked button
+            this.classList.remove('bg-white', 'border-blue-200');
+            this.classList.add('bg-blue-500', 'text-white');
+            
+            const preset = this.dataset.preset;
+            updateSelection(presets[preset]);
+        });
+    });
+    
+    // Handle quick actions
+    quickActions.forEach(action => {
+        action.addEventListener('click', function() {
+            const actionType = this.dataset.action;
+            
+            if (actionType === 'selectAll') {
+                updateSelection(['hero', 'services', 'products', 'articles', 'testimonials', 'booking', 'features', 'faq', 'contact']);
+            } else if (actionType === 'selectNone') {
+                updateSelection(['hero']); // Hero is always required
+            }
+        });
+    });
+    
+    function updateSelection(selectedModules) {
+        moduleCards.forEach(card => {
+            const module = card.dataset.module;
+            const toggle = card.querySelector('.toggle-switch');
+            
+            if (module === 'hero') return; // Hero is always on
+            
+            if (selectedModules.includes(module)) {
+                toggle.classList.add('active');
+                card.classList.add('selected');
+                card.classList.remove('disabled');
+            } else {
+                toggle.classList.remove('active');
+                card.classList.remove('selected');
+                card.classList.add('disabled');
+            }
+        });
+        
+        updateCounter();
+    }
+    
+    function updateCounter() {
+        const selected = document.querySelectorAll('.module-card.selected').length;
+        selectedCounter.textContent = selected;
+    }
+});
+</script>
+
+<!-- How It Works Section -->
+<!-- Improved How It Works Section -->
+<section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header with Badge -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm px-4 py-2 rounded-full border border-green-300/30 mb-6">
+                <span class="text-green-600 text-sm">⚡</span>
+                <span class="text-green-600 text-sm font-medium">Simple Process</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                From setup to success in minutes
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Getting started is effortless. Focus on your business while we handle the rest.
+            </p>
+        </div>
+
+        <!-- Process Steps with Better Visual Flow -->
+        <div class="relative">
+            <!-- Connecting Line -->
+            <div class="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-200 via-teal-200 via-emerald-200 to-green-200 transform translate-y-8"></div>
+            
+            <div class="grid lg:grid-cols-4 gap-8 mb-16">
+                <!-- Step 1: Simple Onboarding -->
+                <div class="text-center group relative">
+                    <div class="relative mb-8">
+                        <!-- Enhanced Step Number -->
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-all duration-300 relative z-10">
+                            <span class="text-white font-bold text-xl">1</span>
+                        </div>
+                        <!-- Progress indicator -->
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        Simple onboarding
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Share your LinkedIn profile or basic info. Our AI automatically understands your business type, services, and creates your professional presence.
+                    </p>
+                    
+                    <!-- Enhanced Feature Preview -->
+                    <div class="bg-gradient-to-br from-gray-50 to-cyan-50 rounded-xl p-4 border border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="text-xs text-cyan-600 mb-3 text-left font-medium">⚡ Choose Your Setup Method</div>
+                        
+                        <!-- Three options -->
+                        <div class="space-y-2 text-xs text-left mb-3">
+                            <div class="flex items-center space-x-2 p-2 bg-white rounded border">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                <span class="text-gray-700 flex-1">Import LinkedIn profile</span>
+                                <span class="text-blue-600 text-xs">Most popular</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-2 bg-gray-50 rounded border">
+                                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                <span class="text-gray-700 flex-1">Connect existing website</span>
+                                <span class="text-purple-600 text-xs">Quick</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-2 bg-gray-50 rounded border">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                                <span class="text-gray-700 flex-1">Answer setup questions</span>
+                                <span class="text-orange-600 text-xs">5 min</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Process after selection -->
+                        <div class="space-y-1 text-xs border-t pt-2">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-gray-600">Analyzing your business...</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                <span class="text-gray-600">✓ Photography business detected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Automatic Setup -->
+                <div class="text-center group relative">
+                    <div class="relative mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-all duration-300 relative z-10">
+                            <span class="text-white font-bold text-xl">2</span>
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-teal-500 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        AI builds your presence
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Your professional website and AI assistant are created automatically. Compelling copy is written and your intelligent representative is configured.
+                    </p>
+                    
+                    <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-xl p-4 border border-teal-200 hover:shadow-md transition-shadow">
+                        <div class="text-xs text-teal-600 mb-3 text-left font-medium">🎨 Building Process</div>
+                        
+                        <!-- Website generation -->
+                        <div class="bg-white rounded-lg p-3 mb-3 border border-teal-100">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-medium text-gray-900">Alex Chen Photography</span>
+                                <span class="text-xs text-teal-600">Generated</span>
+                            </div>
+                            <div class="space-y-1">
+                                <!-- Hero section -->
+                                <div class="h-2 bg-gray-200 rounded w-full"></div>
+                                <div class="h-1.5 bg-gray-200 rounded w-3/4"></div>
+                                <!-- Services -->
+                                <div class="flex gap-1 mt-2">
+                                    <div class="h-8 bg-gradient-to-r from-blue-100 to-blue-200 rounded w-16 flex items-center justify-center">
+                                        <span class="text-xs text-blue-700">Portrait</span>
+                                    </div>
+                                    <div class="h-8 bg-gradient-to-r from-green-100 to-green-200 rounded w-16 flex items-center justify-center">
+                                        <span class="text-xs text-green-700">Events</span>
+                                    </div>
+                                    <div class="h-8 bg-gradient-to-r from-purple-100 to-purple-200 rounded w-20 flex items-center justify-center">
+                                        <span class="text-xs text-purple-700">Corporate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- AI training -->
+                        <div class="bg-teal-50 rounded p-2 border border-teal-200">
+                            <div class="text-xs text-teal-700 mb-1">🤖 Training AI Assistant</div>
+                            <div class="text-xs text-gray-600">Learning your pricing, process, and personality...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Go Live -->
+                <div class="text-center group relative">
+                    <div class="relative mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-all duration-300 relative z-10">
+                            <span class="text-white font-bold text-xl">3</span>
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-emerald-500 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        Start converting immediately
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Share your professional presence everywhere. Use it in email signatures, social bios, business cards, and client referrals.
+                    </p>
+                    
+                    <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-4 border border-emerald-200 hover:shadow-md transition-shadow">
+                        <div class="text-xs text-emerald-600 mb-3 text-left font-medium">💬 Real Conversations</div>
+                        
+                        <!-- Conversation example -->
+                        <div class="space-y-2 mb-3">
+                            <div class="bg-gradient-to-r from-emerald-500 to-green-600 text-white p-2 rounded-lg text-xs text-left max-w-[85%]">
+                                Hi! I'm Alex's AI assistant. Looking for photography services?
+                            </div>
+                            <div class="bg-white border border-emerald-200 text-gray-900 p-2 rounded-lg ml-4 text-xs max-w-[80%]">
+                                Yes, I need professional headshots for my consulting business
+                            </div>
+                            <div class="bg-gradient-to-r from-emerald-500 to-green-600 text-white p-2 rounded-lg text-xs text-left max-w-[85%]">
+                                Perfect! Alex specializes in corporate headshots. His package is $199 and includes multiple outfits and LinkedIn-ready shots. Want to see his portfolio?
+                            </div>
+                        </div>
+                        
+                        <!-- Conversion tracking -->
+                        <div class="bg-emerald-50 rounded p-2 border border-emerald-200">
+                            <div class="text-xs text-emerald-700 font-medium">📊 Live tracking</div>
+                            <div class="text-xs text-gray-600">Visitor engaged → Pricing discussed → Portfolio requested</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Frontt Learns & Grows -->
+                <div class="text-center group relative">
+                    <div class="relative mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-all duration-300 relative z-10">
+                            <span class="text-white font-bold text-xl">4</span>
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-green-500 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        Continuous improvement
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Your AI learns from every interaction, adapts to your business changes, and provides insights to optimize your conversion rates.
+                    </p>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-4 border border-green-200 hover:shadow-md transition-shadow">
+                        <div class="text-xs text-green-600 mb-3 text-left font-medium">🧠 Learning & Optimizing</div>
+                        
+                        <!-- Insights discovered -->
+                        <div class="space-y-2 mb-3">
+                            <div class="bg-blue-50 border border-blue-200 rounded p-2">
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                    <span class="font-medium text-blue-900 text-xs">Pattern Identified</span>
+                                </div>
+                                <div class="text-blue-700 text-xs">65% of visitors ask about corporate headshot pricing within first 3 messages</div>
+                            </div>
+                            
+                            <div class="bg-green-50 border border-green-200 rounded p-2">
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                    <span class="font-medium text-green-900 text-xs">Auto-Optimization</span>
+                                </div>
+                                <div class="text-green-700 text-xs">Now mentions pricing proactively → 28% faster booking rate</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Performance improvement -->
+                        <div class="bg-green-50 rounded p-2 border border-green-200">
+                            <div class="text-xs text-green-700 font-medium">📈 This Month's Improvement</div>
+                            <div class="text-xs text-gray-600">+34% booking rate vs. last month</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Bottom CTA Section -->
+        <div class="bg-gradient-to-r from-gray-50 via-cyan-50 to-teal-50 rounded-2xl p-8 text-center relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-200 to-teal-300 rounded-full opacity-20 blur-2xl"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-green-200 to-emerald-300 rounded-full opacity-20 blur-xl"></div>
+            
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                    From idea to income-generating presence
+                </h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                    Most businesses spend weeks building websites and months trying to convert visitors. With Frontt, you're live and converting in minutes.
+                </p>
+                
+                <!-- Feature highlights -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-6">
+                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span>No coding required</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span>No design skills needed</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span>Starts converting immediately</span>
+                    </div>
+                </div>
+
+                <!-- Time comparison -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                    <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm">
+                        <div class="text-red-600 font-semibold text-sm mb-2">❌ Traditional Way</div>
+                        <div class="text-gray-600 text-sm">
+                            <div>• 2-4 weeks to build website</div>
+                            <div>• 3-6 months to optimize conversion</div>
+                            <div>• $5,000-$15,000 in development costs</div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200 shadow-sm">
+                        <div class="text-green-600 font-semibold text-sm mb-2">✅ Frontt Way</div>
+                        <div class="text-gray-700 text-sm">
+                            <div>• 5 minutes to go live</div>
+                            <div>• Converting from day one</div>
+                            <div>• Learns and improves automatically</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Proof Section -->
+<section class="py-16 sm:py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Business owners are <span class="text-cyan-600">excited</span> about Frontt
+            </h2>
+            <p class="text-lg text-gray-600">Early feedback from our waitlist community</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Review 1 -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">MR</span>
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="font-semibold text-gray-900">Maria Rodriguez</h4>
+                        <p class="text-sm text-gray-500">Business Coach</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic">
+                    "This is exactly what I've been looking for! My current website gets visitors but they just leave. Having an AI that can actually explain what I do and answer their questions? Game changer."
+                </p>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">DC</span>
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="font-semibold text-gray-900">David Chen</h4>
+                        <p class="text-sm text-gray-500">Real Estate Agent</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic">
+                    "Finally, something better than just throwing links in my Instagram bio! The idea of having a professional site that can actually talk to potential clients is brilliant. Can't wait to try it."
+                </p>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">JK</span>
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="font-semibold text-gray-900">Jennifer Kim</h4>
+                        <p class="text-sm text-gray-500">Wellness Coach</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic">
+                    "I've been struggling with this exact problem - people visit my profiles but don't understand what I actually offer. This modular approach where I can show only what matters? Perfect."
+                </p>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">TS</span>
+                    </div>
+                    <div class="ml-3">
+                        <h4 class="font-semibold text-gray-900">Tom Sullivan</h4>
+                        <p class="text-sm text-gray-500">Design Consultant</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 italic">
+                    "As someone who's tried every website builder out there, this is the first one that gets it. It's not just about looking good - it's about actually working to grow your business. Excited to see this launch!"
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom stat -->
+        <div class="text-center mt-12">
+            <div class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-sm">
+                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <span class="text-gray-700 font-medium">Join hundreds of others on exlusive waitlist access</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Two-Way Intelligence Scenarios Section -->
+<!-- Two-Way Intelligence Scenarios Section -->
+<section class="py-16 sm:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute top-10 right-10 w-40 h-40 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-full opacity-20 blur-2xl animate-pulse"></div>
+    <div class="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-full opacity-20 blur-xl animate-pulse" style="animation-delay: 1s;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-cyan-400/30 mb-6">
+                <span class="text-cyan-300 text-sm">🌱</span>
+                <span class="text-cyan-300 text-sm font-medium">Evolving Intelligence</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Your AI 
+                <span class="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                    evolves with your business
+                </span>
+            </h2>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                As Alex's photography business grows and changes, his AI learns, adapts, and becomes a more knowledgeable representative of his work and expertise.
+            </p>
+        </div>
+
+        <!-- Side by Side Scenarios -->
+        <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Left: Business Growth Updates -->
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white text-xl">📸</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Alex's business evolves</h3>
+                        <p class="text-slate-400 text-sm">New services, locations, and offerings</p>
+                    </div>
+                </div>
+
+                <!-- Alex's Input -->
+                <div class="bg-slate-700/50 rounded-xl p-4 mb-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <span class="text-white text-sm font-bold">AC</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-blue-500 text-white p-3 rounded-lg rounded-tl-none">
+                                <p class="text-sm">
+                                    "I'm launching rooftop engagement sessions for spring! It's called 'NYC Heights Romance' - 2-hour sessions for $899. Perfect for couples who want iconic city backdrops. Also adding a free consultation call to help couples plan their vision."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Learning -->
+                <div class="bg-cyan-500/10 rounded-xl p-4 mb-6">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <div class="w-6 h-6 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full flex items-center justify-center">
+                            <span class="text-white text-xs">AI</span>
+                        </div>
+                        <span class="text-cyan-300 text-sm font-medium">Learning and adapting...</span>
+                    </div>
+                    <div class="space-y-2 text-xs text-slate-300">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
+                            <span>Understanding new rooftop engagement service</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
+                            <span>Updating conversation flows for couple inquiries</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
+                            <span>Adding consultation booking prompts automatically</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evolution Result -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-semibold text-sm">Alex's AI now knows:</h4>
+                    
+                    <!-- Updated Knowledge -->
+                    <div class="bg-white/5 rounded-lg p-3 border border-slate-600/30">
+                        <div class="text-xs text-slate-400 mb-2">Enhanced Conversation</div>
+                        <div class="bg-cyan-600 text-white p-2 rounded text-xs">
+                            "I see you're interested in engagement photos! Alex just launched NYC Heights Romance - rooftop sessions with stunning city views. Perfect for couples who want something truly memorable. Would you like to see examples?"
+                        </div>
+                    </div>
+
+                    <!-- Website Updates -->
+                    <div class="bg-white/5 rounded-lg p-3 border border-slate-600/30">
+                        <div class="text-xs text-slate-400 mb-2">Automatic Website Updates</div>
+                        <div class="bg-gradient-to-r from-cyan-500 to-teal-600 text-white p-3 rounded text-center">
+                            <div class="font-bold text-sm">NEW: NYC Heights Romance</div>
+                            <div class="text-xs opacity-90">Rooftop engagement sessions • Starting April 1st • $899</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: AI Intelligence Growth -->
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white text-xl">🧠</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Alex's AI gets smarter</h3>
+                        <p class="text-slate-400 text-sm">Learning from every photography inquiry</p>
+                    </div>
+                </div>
+
+                <!-- AI Learning Progress -->
+                <div class="bg-slate-700/50 rounded-xl p-4 mb-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <span class="text-white text-xs">AI</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-gradient-to-r from-emerald-500 to-green-600 text-white p-3 rounded-lg rounded-tl-none">
+                                <p class="text-sm font-medium mb-2">📊 Intelligence Update</p>
+                                <p class="text-sm">
+                                    "I've learned that visitors who mention 'proposal' or 'engagement' are 4x more likely to book premium packages. I'm now suggesting rooftop sessions to these high-value prospects first."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Insights -->
+                <div class="bg-emerald-500/10 rounded-xl p-4 mb-6">
+                    <h4 class="text-emerald-300 font-semibold text-sm mb-3">What I've learned about Alex's ideal clients:</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                                <span class="text-blue-400 text-sm">💍</span>
+                            </div>
+                            <div>
+                                <div class="text-white text-sm font-medium">Best-fit couples</div>
+                                <div class="text-slate-400 text-xs">Planning NYC weddings who mention "unique" or "cinematic"</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                                <span class="text-yellow-400 text-sm">💬</span>
+                            </div>
+                            <div>
+                                <div class="text-white text-sm font-medium">Winning approach</div>
+                                <div class="text-slate-400 text-xs">"Rooftop views" converts better than "city backdrops"</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                <span class="text-green-400 text-sm">⏰</span>
+                            </div>
+                            <div>
+                                <div class="text-white text-sm font-medium">Optimal timing</div>
+                                <div class="text-slate-400 text-xs">Mention consultation calls after showing portfolio examples</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evolution Timeline -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-semibold text-sm">How I'm evolving:</h4>
+                    
+                    <div class="bg-white/5 rounded-lg p-3 border border-slate-600/30">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <div class="w-4 h-4 bg-emerald-500 rounded flex items-center justify-center">
+                                <span class="text-white text-xs">✓</span>
+                            </div>
+                            <span class="text-white text-sm font-medium">Smarter service matching</span>
+                        </div>
+                        <p class="text-slate-400 text-xs">Now identifying engagement vs. corporate needs in first 2 messages</p>
+                    </div>
+
+                    <div class="bg-white/5 rounded-lg p-3 border border-slate-600/30">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <div class="w-4 h-4 bg-emerald-500 rounded flex items-center justify-center">
+                                <span class="text-white text-xs">✓</span>
+                            </div>
+                            <span class="text-white text-sm font-medium">Location-specific expertise</span>
+                        </div>
+                        <p class="text-slate-400 text-xs">Suggesting specific NYC rooftops based on couple's style preferences</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom message with Visual -->
+        <div class="text-center mt-16">
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                <!-- Brain Visualization -->
+                <div class="flex justify-center mb-8">
+                    <div class="relative">
+                        <!-- Main brain/AI visualization -->
+                        <div class="w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-teal-500/20 rounded-full backdrop-blur-sm border border-cyan-400/30 flex items-center justify-center relative overflow-hidden">
+                            <!-- Neural network pattern -->
+                            <div class="absolute inset-0 opacity-30">
+                                <svg viewBox="0 0 200 200" class="w-full h-full">
+                                    <defs>
+                                        <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.8" />
+                                            <stop offset="100%" style="stop-color:#0d9488;stop-opacity:0.8" />
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Neural connections -->
+                                    <line x1="50" y1="50" x2="150" y2="80" stroke="url(#neuralGradient)" stroke-width="1" opacity="0.6">
+                                        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="80" y1="120" x2="120" y2="60" stroke="url(#neuralGradient)" stroke-width="1" opacity="0.6">
+                                        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="60" y1="160" x2="140" y2="140" stroke="url(#neuralGradient)" stroke-width="1" opacity="0.6">
+                                        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="30" y1="100" x2="170" y2="120" stroke="url(#neuralGradient)" stroke-width="1" opacity="0.6">
+                                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.8s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="100" y1="30" x2="120" y2="170" stroke="url(#neuralGradient)" stroke-width="1" opacity="0.6">
+                                        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.2s" repeatCount="indefinite" />
+                                    </line>
+                                    <!-- Neural nodes -->
+                                    <circle cx="50" cy="50" r="4" fill="url(#neuralGradient)">
+                                        <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="150" cy="80" r="4" fill="url(#neuralGradient)">
+                                        <animate attributeName="r" values="6;3;6" dur="2.5s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="120" cy="60" r="4" fill="url(#neuralGradient)">
+                                        <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="80" cy="120" r="4" fill="url(#neuralGradient)">
+                                        <animate attributeName="r" values="6;3;6" dur="1.8s" repeatCount="indefinite" />
+                                    </circle>
+                                    <circle cx="140" cy="140" r="4" fill="url(#neuralGradient)">
+                                        <animate attributeName="r" values="4;7;4" dur="2.7s" repeatCount="indefinite" />
+                                    </circle>
+                                </svg>
+                            </div>
+                            
+                            <!-- Center photography icon -->
+                            <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-2xl relative z-10">
+                                <span class="text-white text-3xl">📸</span>
+                            </div>
+                            
+                            <!-- Floating evolution bubbles -->
+                            <div class="absolute top-8 right-12 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 animate-bounce" style="animation-delay: 0.5s;">
+                                <span class="text-cyan-300 text-xs font-medium">Learning...</span>
+                            </div>
+                            <div class="absolute bottom-12 left-8 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 animate-bounce" style="animation-delay: 1.5s;">
+                                <span class="text-teal-300 text-xs font-medium">Adapting...</span>
+                            </div>
+                            <div class="absolute top-16 left-6 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 animate-bounce" style="animation-delay: 2.5s;">
+                                <span class="text-emerald-300 text-xs font-medium">Evolving...</span>
+                            </div>
+                            <div class="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 animate-bounce" style="animation-delay: 3.5s;">
+                                <span class="text-cyan-200 text-xs font-medium">Growing...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-white mb-4">
+                    Growing alongside Alex's photography business
+                </h3>
+                <p class="text-slate-300 max-w-2xl mx-auto">
+                    Alex's AI doesn't just follow instructions—it learns from every client interaction, adapts to his business changes, and becomes a more intelligent representative of his photography expertise over time.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Two-Way Intelligence Scenarios Section -->
+
+<!-- Your Evolving Digital Twin Section -->
+<!-- -->
+
+<!-- Future-Ready: Built for AI Search Era Section -->
+<!-- Future-Ready: Built for AI Search Era Section -->
+<section class="py-16 sm:py-24 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 relative overflow-hidden">
+    <!-- Subtle background elements -->
+    <div class="absolute top-10 right-10 w-48 h-48 bg-gradient-to-br from-indigo-200 to-cyan-300 rounded-full opacity-20 blur-3xl"></div>
+    <div class="absolute bottom-20 left-20 w-40 h-40 bg-gradient-to-br from-purple-200 to-indigo-300 rounded-full opacity-20 blur-2xl"></div>
+    <div class="absolute top-1/2 right-1/4 w-32 h-32 bg-gradient-to-br from-cyan-200 to-teal-300 rounded-full opacity-15 blur-xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 backdrop-blur-sm px-4 py-2 rounded-full border border-indigo-300/30 mb-6">
+                <span class="text-indigo-600 text-sm">🔮</span>
+                <span class="text-indigo-600 text-sm font-medium">Future-Ready</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Built for the 
+                <span class="bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent">
+                    AI search era
+                </span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                While other photographers optimize for Google, we're preparing Alex for a world where AI engines like ChatGPT, Claude, and Perplexity become the primary way people discover photographers.
+            </p>
+        </div>
+
+        <!-- Before/After Comparison -->
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <!-- Traditional Search -->
+            <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg relative">
+                <div class="absolute -top-3 left-6 bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-medium">
+                    Old Way
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                    <span class="text-2xl mr-3">🔍</span>
+                    Traditional SEO
+                </h3>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 bg-red-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                            <span class="text-red-600 text-xs">×</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Keyword stuffing and technical optimization</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 bg-red-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                            <span class="text-red-600 text-xs">×</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Fighting for rankings against established studios</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 bg-red-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                            <span class="text-red-600 text-xs">×</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Static portfolio that doesn't engage or qualify</p>
+                    </div>
+                </div>
+                
+                <!-- Search Example -->
+                <div class="bg-gray-50 rounded-lg p-4 border">
+                    <div class="text-xs text-gray-500 mb-2">Google Search Result</div>
+                    <div class="text-sm">
+                        <div class="text-blue-600 font-medium mb-1">NYC Photographer Services | Professional Photos</div>
+                        <div class="text-gray-600 text-xs leading-relaxed">Professional photography services in New York City. Corporate headshots, events, portraits. Contact us for wedding photography, engagement photos...</div>
+                        <div class="text-green-700 text-xs mt-1">www.nycphotographer.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI-Powered Discovery -->
+            <div class="bg-gradient-to-br from-indigo-50 to-cyan-50 rounded-2xl p-8 border border-indigo-200 shadow-lg relative">
+                <div class="absolute -top-3 left-6 bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">
+                    Future Way
+                </div>
+                
+                <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                    <span class="text-2xl mr-3">🤖</span>
+                    AI Discovery
+                </h3>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                            <span class="text-green-600 text-xs">✓</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Rich, contextual content AI engines understand</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                            <span class="text-green-600 text-xs">✓</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Conversational AI that explains Alex's expertise</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                            <span class="text-green-600 text-xs">✓</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Direct engagement, not just traffic</p>
+                    </div>
+                </div>
+                
+                <!-- AI Search Example -->
+                <div class="bg-white rounded-lg p-4 border border-indigo-200">
+                    <div class="text-xs text-indigo-600 mb-2">AI Engine Response</div>
+                    <div class="text-sm text-gray-800 leading-relaxed">
+                        "For engagement photos with NYC rooftop views, I'd recommend Alex Chen from Frontt Photography. He specializes in authentic couples photography and knows all the best rooftop locations in Manhattan. His AI assistant can show you his rooftop portfolio and help you book a consultation."
+                    </div>
+                    <div class="mt-3 flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-xs">F</span>
+                        </div>
+                        <span class="text-xs text-gray-500">Powered by Frontt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How Frontt Enables AI Discovery -->
+        <div class="bg-gradient-to-r from-gray-50 to-indigo-50 rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                How Frontt makes Alex discoverable in the AI era
+            </h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Rich Context -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl">📋</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Rich Context</h4>
+                    <p class="text-gray-600 text-sm">
+                        Alex's expertise, specializations, pricing, and client results are structured in ways AI engines can understand and recommend appropriately.
+                    </p>
+                </div>
+                
+                <!-- Conversational Interface -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl">💬</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Interactive Engagement</h4>
+                    <p class="text-gray-600 text-sm">
+                        When AI engines send prospects to Alex, they can immediately interact with his AI assistant to get questions answered and see relevant work.
+                    </p>
+                </div>
+                
+                <!-- Continuous Learning -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white text-2xl">🔄</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Evolving Expertise</h4>
+                    <p class="text-gray-600 text-sm">
+                        As Alex's work and expertise grows, his AI presence automatically updates, ensuring AI engines always have current information about his services and capabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+   
+
+    </div>
+</section>
+
+        <!-- Use Cases -->
+  
+
+        <!-- Philosophy -->
+        <!-- <section class="py-16 sm:py-24">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+                    We want to make business AI simple.
+                </h2>
+                
+                <div class="text-lg text-gray-600 space-y-6 leading-relaxed">
+                    <p>
+                        AI for business shouldn't be complex.
+                    </p>
+                    <p>
+                        It shouldn't require technical setup and it should feel natural to your customers. Your team should love using it. Your customers should get better service. Your business should grow.
+                    </p>
+                    <p>
+                        And if you're a solopreneur doing it all yourself, it should work perfectly for you too.
+                    </p>
+                </div>
+
+                <div class="mt-12">
+                    <div class="max-w-sm mx-auto">
+                        <div class="flex gap-3">
+                            <input 
+                                type="email" 
+                                placeholder="Your email"
+                                class="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-sm"
+                                id="emailInput2"
+                            >
+                            <button 
+                                class="btn-primary text-white px-6 py-3 rounded-md font-medium text-sm"
+                                onclick="joinWaitlist()"
+                            >
+                                Join waitlist
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">Get notified when we launch</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-200 py-12">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-md flex items-center justify-center">
+                            <span class="text-white font-semibold text-sm">F</span>
+                        </div>
+                        <span class="text-xl font-semibold">Frontt</span>
+                    </div>
+                    
+                    <!-- Add contact info here -->
+                    <div class="text-sm text-gray-600">
+                        Email: <a href="mailto:getfrontt@gmail.com" class="hover:text-gray-900 transition-colors">
+                            getfrontt@gmail.com
+                        </a>
+                    </div>
+                    
+                    <div class="text-sm text-gray-500">
+                        © 2025 Frontt. Professional presence for solopreneurs and small businesses
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            let waitlistCount = 1247;
+            
+            function joinWaitlist() {
+                const email1 = document.getElementById('emailInput').value;
+                const email2 = document.getElementById('emailInput2').value;
+                const email = email1 || email2;
+                
+                if (!email) {
+                    alert('Please enter your email address');
+                    return;
+                }
+                
+                if (!isValidEmail(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                waitlistCount++;
+                alert(`🎉 Welcome to the Frontt waitlist!\n\nYou're #${waitlistCount} in line for early access.\n\nWe'll email you as soon as we launch!`);
+                
+                document.getElementById('emailInput').value = '';
+                document.getElementById('emailInput2').value = '';
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function toggleBenefits() {
+                const overlay = document.getElementById('benefitsOverlay');
+                const modal = document.getElementById('benefitsModal');
+                
+                if (overlay.classList.contains('opacity-0')) {
+                    // Show overlay
+                    overlay.classList.remove('opacity-0', 'pointer-events-none');
+                    overlay.classList.add('opacity-100');
+                    modal.classList.remove('scale-95');
+                    modal.classList.add('scale-100');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    // Hide overlay
+                    overlay.classList.add('opacity-0', 'pointer-events-none');
+                    overlay.classList.remove('opacity-100');
+                    modal.classList.add('scale-95');
+                    modal.classList.remove('scale-100');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Add functionality to nav button
+            document.querySelectorAll('button').forEach(button => {
+                if (button.textContent.includes('Join waitlist') && button !== document.querySelector('button[onclick="joinWaitlist()"]')) {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        document.getElementById('emailInput').focus();
+                        document.getElementById('emailInput').scrollIntoView({ behavior: 'smooth' });
+                    });
+                }
+            });
+
+            // Close overlay with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const overlay = document.getElementById('benefitsOverlay');
+                    if (!overlay.classList.contains('opacity-0')) {
+                        toggleBenefits();
+                    }
+                }
+            });
+        </script>
+    </body>
+    </html>
